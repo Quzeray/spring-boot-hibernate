@@ -1,8 +1,10 @@
 package com.example.springboothibernate.entity;
 
 
+import com.example.springboothibernate.entity.id.PersonId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 
 import java.io.Serializable;
@@ -10,6 +12,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "PERSONS")
+@IdClass(PersonId.class)
 public class Person implements Serializable {
     @Id
     private String name;

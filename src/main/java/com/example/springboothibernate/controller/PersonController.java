@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 @RestController
 public class PersonController {
-    PersonRepository repository;
+    private final PersonRepository repository;
 
     public PersonController(PersonRepository repository) {
         this.repository = repository;
